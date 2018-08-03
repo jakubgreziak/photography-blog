@@ -17,6 +17,36 @@
             </div>
             <button class="header-arrow fa fa-arrow-down"></button>
         </header>
+        
+        <div class="menubar">
+            <img class="menubar-logo" src="img/logo-short-dark.png">
+            <ul class="menubar-links">
+                <li class="active"><a href="#">About me</a></li>
+                <li><a href="#">Works</a></li>
+                <li><a href="#">Contact me</a></li>
+                <li><a href="#">Follow me</a></li>
+            </ul>
+            <button class="menubar-togglemenu fa fa-bars"></button>
+        </div>
+        
+        <section class="aboutme">
+            <div class="container">
+                <div class="aboutme-inner">
+                    <h2 class="aboutme-inner-title">A little bit about me</h2>
+                    <p class="aboutme-inner-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim.</p>
+                </div>
+            </div>
+            
+        </section>
             
     </body>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+    
+    $('.menubar-togglemenu').on('click', function(){
+        var $this = $(this);
+        $('.menubar-links').toggleClass('toggle');
+        $this.toggleClass('fa-bars').toggleClass('fa-close');
+    });
+    </script>
 </html>

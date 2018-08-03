@@ -9,6 +9,7 @@
     padding: 170px 0px 70px;
     
     @include breakpoint(700px) {
+        order: 2;
         height: 500px;
         padding: 100px 0px 50px;
     }
