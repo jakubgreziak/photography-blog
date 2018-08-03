@@ -9,14 +9,22 @@ VARIABLES DEFAULT
 
 body {
     position: relative;
-    color: #000;
-    background-color: #fff;
-    padding: 25px;
+    max-width: 1920px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-family: Raleway;
     font-size: 13px;
     line-height: 100%;
     font-weight: 400;
     overflow-x: hidden;
-    margin: 0 auto;
-    text-align: center;
+    margin: 0px auto;
+    padding: 25px;
+    
+    @include breakpoint(1200px) {
+        padding: 15px;
+    }
+    
+    @include breakpoint(700px) {
+        padding: 10px;
+    }
 }
