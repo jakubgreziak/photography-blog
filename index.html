@@ -6,29 +6,29 @@
         <title>Photography Blog</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
-    <body>
+    <body id="home">
         
         <header class="header">
             <div class="container">
-                <a class="header-logo" href="#"></a>
+                <a class="header-logo" href="#home"></a>
                 <h1 class="header-title">See the world through my lens</h1>
                 <p class="header-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
             </div>
-            <button class="header-arrow icon icon-arrow-down"></button>
+            <a class="header-arrow icon icon-arrow-down" href="#aboutme"></a>
         </header>
         
         <div class="menubar">
-            <a class="menubar-logo" href="#"></a>
+            <a class="menubar-logo" href="#home"></a>
             <ul class="menubar-links">
-                <li class="active"><a href="#">About me</a></li>
-                <li><a href="#">Works</a></li>
-                <li><a href="#">Contact me</a></li>
-                <li><a href="#">Follow me</a></li>
+                <li class="active"><a href="#aboutme">About me</a></li>
+                <li><a href="#works">Works</a></li>
+                <li><a href="#followme">Follow me</a></li>
+                <li><a href="#contact">Contact me</a></li>
             </ul>
             <button class="menubar-togglemenu icon icon-bars"></button>
         </div>
         
-        <section class="aboutme">
+        <section class="aboutme" id="aboutme">
             <div class="container">
                 <h2 class="aboutme-title">A little bit about me</h2>
                 <p class="aboutme-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim.</p>
@@ -36,7 +36,7 @@
             
         </section>
         
-        <section class="works">
+        <section class="works" id="works">
             <h2 class="works-title">Works</h2>
             <div class="works-posts">
                 <a href="#" class="works-singlepost nature">
@@ -96,6 +96,7 @@
             </div>
             <button class="works-button">Load More</button>
         </section>
+        
         <section class="reviews">
             <div class="container">
                 <h2 class="reviews-title">See the world through my lens</h2>
@@ -135,7 +136,7 @@
             <iframe src="https://www.youtube.com/embed/3WWlhPmqXQI?vq=hd1080" allowfullscreen="allowfullscreen"></iframe>
         </div>
         
-        <section class="followme">
+        <section class="followme" id="followme">
             <div class="container">
                 <h2 class="followme-title">Follow me</h2>
                 <div class="followme-socials">
@@ -148,7 +149,7 @@
             </div>
         </section>
         
-        <section class="contact">
+        <section class="contact"  id="contact">
             <div class="container">
                 <h2 class="contact-title">Contact</h2>
                 <p class="contact-desc">Claritas est etiam processus dynamicus qui sequitur</p>
@@ -171,11 +172,12 @@
         </section>
         
         <footer class="footer">
-            <a class="footer-logo" href="#"></a>
+            <a class="footer-logo" href="#home"></a>
             <p class="footer-copyright">&copy; Copyright <script>var year = new Date();document.write(year.getFullYear());</script></p>
         </footer>
-      
         
+        <a class="button-back icon icon-arrow-down" href="#home" style="display: none;"></a>
+      
         <script src="js/libs/jquery-3.3.1.min.js"></script>
         <script src="js/libs/owl.carousel.min.js"></script>
         <script src="js/libs/jquery.validate.min.js"></script>

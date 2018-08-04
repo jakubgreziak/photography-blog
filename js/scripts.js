@@ -6,6 +6,25 @@ $(document).ready(function(){
         $this.toggleClass('icon-bars').toggleClass('icon-close');
     });
     
+    $(this).scroll(function() {
+        var y = $(this).scrollTop();
+        if (y > 200) {
+            $('.button-back').fadeIn(300);
+        } else {
+            $('.button-back').fadeOut(300);
+        }
+    });
+    
+    $('a[href^="#"]').on('click', function(event) {
+        var target = $( $(this).attr('href') );
+        if( target.length ) {
+            event.preventDefault();
+            $('html, body').animate({
+                scrollTop: target.offset().top - 80
+            }, 750);
+        }
+    });
+    
     $(".reviews-slider").owlCarousel({
         loop: true,
         dots: true,

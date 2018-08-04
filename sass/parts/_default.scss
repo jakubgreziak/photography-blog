@@ -28,3 +28,36 @@ body {
         padding: 0 10px;
     }
 }
+
+.button-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    margin: 0px;
+    padding: 0px;
+    width: 45px;
+    height: 45px;
+    border: 0;
+    border-radius: 50%;
+    background-color: #d07c7c;
+    color: #fff;
+    font-size: 20px;
+    outline: 0;
+    cursor: pointer;
+    z-index: 5;
+    text-decoration: none;
+    transform: rotate(180deg);
+    -moz-transition: all,linear .3s;
+    -o-transition: all,linear .3s;
+    -webkit-transition: all,linear .3s;
+    transition: all,linear .3s;
+    
+    &:hover, &:active, &:focus {
+        background-color: #fff;
+        color: #d07c7c;
+        border: 2px solid #d07c7c;
+    }
+}

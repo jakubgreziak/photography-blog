@@ -257,6 +257,40 @@ body {
   }
 }
 
+/* line 32, ../sass/parts/_default.scss */
+.button-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  margin: 0px;
+  padding: 0px;
+  width: 45px;
+  height: 45px;
+  border: 0;
+  border-radius: 50%;
+  background-color: #d07c7c;
+  color: #fff;
+  font-size: 20px;
+  outline: 0;
+  cursor: pointer;
+  z-index: 5;
+  text-decoration: none;
+  transform: rotate(180deg);
+  -moz-transition: all,linear .3s;
+  -o-transition: all,linear .3s;
+  -webkit-transition: all,linear .3s;
+  transition: all,linear .3s;
+}
+/* line 58, ../sass/parts/_default.scss */
+.button-back:hover, .button-back:active, .button-back:focus {
+  background-color: #fff;
+  color: #d07c7c;
+  border: 2px solid #d07c7c;
+}
+
 /*
 * Owl Carousel v2.3.4
 * Copyright 2013-2018 David Deutsch
@@ -684,7 +718,7 @@ body {
   color: #fff;
   font-family: Raleway;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 20px;
   font-weight: 300;
 }
 @media screen and (max-width: 1200px) {
@@ -703,10 +737,15 @@ body {
 }
 /* line 79, ../sass/parts/_header.scss */
 .header-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
+  left: 0;
+  right: 0;
   bottom: 125px;
-  margin: 0px;
-  padding: 0px;
+  margin: 0 auto;
+  padding: 0;
   width: 45px;
   height: 45px;
   border: 0;
@@ -716,6 +755,16 @@ body {
   font-size: 20px;
   outline: 0;
   cursor: pointer;
+  text-decoration: none;
+  -moz-transition: all,linear .3s;
+  -o-transition: all,linear .3s;
+  -webkit-transition: all,linear .3s;
+  transition: all,linear .3s;
+}
+/* line 104, ../sass/parts/_header.scss */
+.header-arrow:hover, .header-arrow:active, .header-arrow:focus {
+  background-color: #d07c7c;
+  color: #fff;
 }
 @media screen and (max-width: 700px) {
   /* line 79, ../sass/parts/_header.scss */
