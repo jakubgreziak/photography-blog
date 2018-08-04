@@ -1,0 +1,94 @@
+// REVIEWS
+
+.reviews {
+    padding: 140px 0;
+    text-align: center;
+    order: 5;
+        
+    @include breakpoint(1200px) {
+        padding: 70px 0;
+    }
+        
+    @include breakpoint(700px) {
+        padding: 50px 0;
+    }
+    
+    &-title {
+        position: relative;
+        color: #848282;
+        font-family: "Playfair Display";
+        font-size: 25px;
+        line-height: 30px;
+        font-weight: 400;
+        margin-bottom: 70px;
+        
+        &:after {
+            position: absolute;
+            content: "";
+            bottom: -10px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 62px;
+            height: 3px;
+            background-color: #d07c7c;
+        }
+    }
+    
+    
+    &-slider {
+        
+        .slide-quote {
+            margin: 0 auto 25px;
+            max-width: 600px;
+            color: #848282;
+            font-family: Raleway;
+            font-size: 18px;
+            line-height: 24px;
+            font-weight: 300;
+            font-style: italic;
+            
+            @include breakpoint(1200px) {
+                font-size: 16px;
+                line-height: 20px;
+            }
+            
+            @include breakpoint(700px) {
+                font-size: 13px;
+                line-height: 16px;
+            }
+        }
+        
+        .slide-author {
+            color: #a0a0a0;
+            font-family: Raleway;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 18px;
+            
+            @include breakpoint(1200px) {
+                font-size: 13px;
+                line-height: 16px;
+            }
+            
+            @include breakpoint(700px) {
+                font-size: 12px;
+                line-height: 14px;
+            }
+        }
+        
+        .owl-dots .owl-dot {
+            outline: 0;
+            
+            &.active span, &:hover span {
+                background-color: #d07c7c; 
+            }
+        }
+        
+        .owl-nav.disabled + .owl-dots {
+            margin-top: 30px;
+        }
+    }
+    
+}
+

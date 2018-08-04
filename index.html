@@ -5,13 +5,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Photography Blog</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
         
         <header class="header">
             <div class="container">
-                <img class="header-logo" src="img/logo.png">
+                <a class="header-logo" href="#"></a>
                 <h1 class="header-title">See the world through my lens</h1>
                 <p class="header-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
             </div>
@@ -19,7 +21,7 @@
         </header>
         
         <div class="menubar">
-            <img class="menubar-logo" src="img/logo-short-dark.png">
+            <a class="menubar-logo" href="#"></a>
             <ul class="menubar-links">
                 <li class="active"><a href="#">About me</a></li>
                 <li><a href="#">Works</a></li>
@@ -97,15 +99,68 @@
             </div>
             <button class="works-button">Load More</button>
         </section>
-            
+        <section class="reviews">
+            <div class="container">
+                <h2 class="reviews-title">See the world through my lens</h2>
+
+                <div class="reviews-slider owl-carousel owl-theme">
+
+                    <blockquote>
+                        <p class="slide-quote">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt. At discere tractatos maluisset duo, vel ne iudicabit laboramus. Est an dolor graeco, corrumpit rationibus efficiendi vix te.</p>
+                        <footer class="slide-author">John Doe CEO at Unknown</footer>
+                    </blockquote>
+
+                    <blockquote>
+                        <p class="slide-quote">Lorem ipsum dolor sit amet, cum at agam splendide, veri appetere aliquando eum ut, ancillae accusata sit cu. Id esse apeirian complectitur eam, ex dolore populo feugiat mei, mei mollis melius sanctus ad. Ex usu malorum assueverit constituam. Quo quod elitr vituperata ei.</p>
+                        <footer class="slide-author">Crazy hunch-backed old guy in Aladdin</footer>
+                    </blockquote>
+
+                    <blockquote>
+                        <p class="slide-quote">Quo ea delenit inimicus, ne admodum assueverit cum. Suscipit quaestio scribentur ne vix, nonumes veritus qualisque usu ex, no cum posse accumsan scaevola. Amet quas an est, per aliquam legendos ex. Ex vim legere quidam democritum, doctus ocurreret eos ea.</p>
+                        <footer class="slide-author">John Doe CEO at Unknown</footer>
+                    </blockquote>
+
+                    <blockquote>
+                        <p class="slide-quote">Semper placerat id eam. Nusquam corrumpit splendide ei duo, at invidunt accommodare delicatissimi duo. Eum ex habeo salutatus, his verear iudicabit eu.</p>
+                        <footer class="slide-author">John Doe CEO at Unknown</footer>
+                    </blockquote>
+
+                    <blockquote>
+                        <p class="slide-quote">Dolores perfecto ea quo, eum ut iudico postea. Minim deserunt per ne, vel te regione forensibus scripserit. Mel ne dicit graece noluisse, qui ei noster prodesset.</p>
+                        <footer class="slide-author">John Doe CEO at Unknown</footer>
+                    </blockquote>
+
+                </div>
+            </div>
+        </section>
+      
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+        <script>
+
+            $('.menubar-togglemenu').on('click', function(){
+                var $this = $(this);
+                $('.menubar-links').toggleClass('toggle');
+                $this.toggleClass('fa-bars').toggleClass('fa-close');
+            });
+
+            $(document).ready(function(){
+                $(".reviews-slider").owlCarousel({
+                    loop: true,
+                    dots: true,
+                    dotsEach: true,
+                    nav: false,
+                    autoplay: true,
+                    autoplayTimeout: 4500,
+                    autoplayHoverPause: true,
+                    items: 1
+                });
+            });
+ 
+
+
+        </script>
     </body>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script>
-    
-    $('.menubar-togglemenu').on('click', function(){
-        var $this = $(this);
-        $('.menubar-links').toggleClass('toggle');
-        $this.toggleClass('fa-bars').toggleClass('fa-close');
-    });
-    </script>
 </html>
