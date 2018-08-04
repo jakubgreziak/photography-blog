@@ -2,6 +2,7 @@
  
 .aboutme {
     padding: 140px 0;
+    order: 3;
         
     @include breakpoint(1200px) {
         padding: 70px 0;
@@ -9,19 +10,18 @@
         
     @include breakpoint(700px) {
         padding: 50px 0;
-        order: 3;
     }
     
     &-title {
+        position: relative;
         color: #5a5957;
         font-family: "Playfair Display";
         font-size: 25px;
-        font-weight: 400;
         line-height: 30px;
+        font-weight: 400;
         text-transform: uppercase;
         text-align: center;
-        position: relative;
-            
+        
         &:after {
             position: absolute;
             content: "";
@@ -36,13 +36,13 @@
     }
         
     &-desc {
+        margin: 60px auto 0;
+        max-width: 750px;
         color: #848282;
         font-family: Raleway;
         font-size: 14px;
-        font-weight: 300;
         line-height: 26px;
-        max-width: 750px;
-        margin: 60px auto 0;
+        font-weight: 300;
         text-align: center;
     }
 }

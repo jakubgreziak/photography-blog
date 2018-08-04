@@ -1,19 +1,13 @@
-/****************************************************************************
-1. RESET & COMPASS
-****************************************************************************/
+// 1. RESET & COMPASS
 @import "compass";
 @import "compass/reset";
 
-/****************************************************************************
-2. DEFAULT STYLES (FONTS + VARIABLES) + GRID SYSTEM
-****************************************************************************/
+// 2. DEFAULT STYLES (FONTS + VARIABLES) + GRID SYSTEM
 @import "parts/fonts";
 @import "parts/grid";
 @import "parts/default";
 
-/****************************************************************************
-3. STYLES
-****************************************************************************/
+// 3. STYLES
 @import "parts/header";
 @import "parts/menubar";
 @import "parts/aboutme";

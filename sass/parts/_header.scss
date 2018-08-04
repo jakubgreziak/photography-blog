@@ -2,34 +2,35 @@
 
 .header {
     position: relative;
-    height: 660px;
-    text-align: center;
-    background: url(../img/header-background.jpg) no-repeat;
-    background-size: cover;
-    background-position: center center;
     padding: 170px 0px 70px;
+    height: 660px;
+    background: url(../img/header-background.jpg) no-repeat center / cover;
+    text-align: center;
+    order: 1;
     
     @include breakpoint(700px) {
-        order: 2;
-        height: 500px;
         padding: 100px 0px 50px;
+        height: 500px;
+        order: 2;
     }
-    
     
     &-logo {
         display: block;
         margin: 0px auto;
+        width: 141px;
+        height: 58px;
+        background: url(../img/logo.png) no-repeat;
+        cursor: pointer;
     }
-    
     
     &-title {
         position: relative;
-        color: rgb(255, 255, 255);
+        margin-top: 50px;
+        color: #fff;
         font-family: "Playfair Display";
         font-size: 48px;
-        font-weight: 400;
         line-height: 58px;
-        margin-top: 50px;
+        font-weight: 400;
         
         @include breakpoint(1200px) {
             font-size: 36px;
@@ -43,25 +44,25 @@
         
         &:before {
             position: absolute;
-            width: 80px;
-            height: 3px;
-            background-color: rgb(255, 255, 255);
             content: "";
             bottom: -20px;
             left: 0px;
             right: 0px;
             margin: 0px auto;
+            width: 80px;
+            height: 3px;
+            background-color: #fff;
         }
     }
     
     &-desc {
+        margin: 60px auto 0px;
         max-width: 450px;
-        color: rgb(255, 255, 255);
+        color: #fff;
         font-family: Raleway;
         font-size: 16px;
+        line-height: 22px;
         font-weight: 300;
-        line-height: 23px;
-        margin: 60px auto 0px;
         
         @include breakpoint(1200px) {
             font-size: 14px;
@@ -75,18 +76,19 @@
     }
     
     &-arrow {
-        background-color: inherit;
-        font-size: 20px;
-        color: rgb(255, 255, 255);
         position: absolute;
         bottom: 125px;
-        padding: 0px;
         margin: 0px;
-        border-width: 0px;
-        border-style: initial;
-        border-color: initial;
-        border-image: initial;
-        outline: 0px;
+        padding: 0px;
+        width: 45px;
+        height: 45px;
+        border: 0;
+        border-radius: 50%;
+        background-color: #fff;
+        color: #d07c7c;
+        font-size: 20px;
+        outline: 0;
+        cursor: pointer;
         
         @include breakpoint(700px) {
             bottom: 25px;

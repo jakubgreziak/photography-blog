@@ -15,12 +15,12 @@
     
     &-title {
         position: relative;
+        margin-bottom: 70px;
         color: #848282;
         font-family: "Playfair Display";
         font-size: 25px;
         line-height: 30px;
         font-weight: 400;
-        margin-bottom: 70px;
         
         &:after {
             position: absolute;
@@ -34,7 +34,6 @@
             background-color: #d07c7c;
         }
     }
-    
     
     &-slider {
         
@@ -63,8 +62,8 @@
             color: #a0a0a0;
             font-family: Raleway;
             font-size: 14px;
-            font-weight: 300;
             line-height: 18px;
+            font-weight: 300;
             
             @include breakpoint(1200px) {
                 font-size: 13px;
@@ -89,6 +88,4 @@
             margin-top: 30px;
         }
     }
-    
 }
-
