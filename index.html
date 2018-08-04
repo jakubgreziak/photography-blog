@@ -150,10 +150,33 @@
                 </div>
             </div>
         </section>
+        
+        <section class="contact">
+            <div class="container">
+                <h2 class="contact-title">Contact</h2>
+                <p class="contact-desc">Claritas est etiam processus dynamicus qui sequitur</p>
+                <form class="contact-form">
+                    <label>
+                        <i class="fa fa-user"></i>
+                        <input name="name" placeholder="Your Name*">
+                    </label>
+                    <label>
+                        <i class="fa fa-envelope"></i>
+                        <input name="email" placeholder="Your E-mail address*">
+                    </label>
+                    <label>
+                        <i class="fa fa-comment"></i>
+                        <textarea name="message" placeholder="Your Message"></textarea>
+                    </label>
+                    <button type="submit">SEND</button>
+                </form>
+            </div>
+        </section>
       
         
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
 
         <script>
 
@@ -174,6 +197,43 @@
                     autoplayHoverPause: true,
                     items: 1
                 });
+            });
+            
+            $('.contact-form').validate({ 
+
+                rules: {
+                    name: {
+                        required: true,
+                        minlength: 3,
+                        maxlength: 49
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    message: {
+                        required: true,
+                        minlength: 15,
+                        maxlength: 500
+                    }
+                },
+                errorClass: "js-error",
+                messages: {
+                    name: {
+                        required: "Please enter your name",
+                        minlength: "This label must be at least 3 characters long",
+                        maxlength: "This label must be at most 49 characters long"
+                    },
+                    email: {
+                        required: "Please enter your email",
+                        email: "Please enter a valid email address"
+                    },
+                    message: {
+                        required: "Please enter your message",
+                        minlength: "This label must be at least 15 characters long",
+                        maxlength: "This label must be at most 500 characters long"
+                    }
+                }
             });
  
 
