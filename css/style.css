@@ -653,9 +653,18 @@ body {
   position: relative;
   padding: 170px 0px 70px;
   height: 660px;
-  background: url(../img/header-background.jpg) no-repeat center/cover;
+  background-repeat: no-repeat;
+  background-position: 15% 75%;
+  background-size: cover;
+  background-image: url(../img/header-background-1870px.jpg);
   text-align: center;
   order: 1;
+}
+@media screen and (max-width: 1200px) {
+  /* line 3, ../sass/parts/_header.scss */
+  .header {
+    background-image: url(../img/header-background-1200px.jpg);
+  }
 }
 @media screen and (max-width: 700px) {
   /* line 3, ../sass/parts/_header.scss */
@@ -663,10 +672,17 @@ body {
     margin-top: 55px;
     padding: 100px 0px 50px;
     height: 500px;
+    background-image: url(../img/header-background-700px.jpg);
     order: 2;
   }
 }
-/* line 18, ../sass/parts/_header.scss */
+@media screen and (max-width: 400px) {
+  /* line 3, ../sass/parts/_header.scss */
+  .header {
+    background-position: 25% 75%;
+  }
+}
+/* line 30, ../sass/parts/_header.scss */
 .header-logo {
   display: block;
   margin: 0px auto;
@@ -675,7 +691,7 @@ body {
   background: url(../img/logo.png) no-repeat;
   cursor: pointer;
 }
-/* line 27, ../sass/parts/_header.scss */
+/* line 39, ../sass/parts/_header.scss */
 .header-title {
   position: relative;
   margin-top: 50px;
@@ -686,20 +702,20 @@ body {
   font-weight: 400;
 }
 @media screen and (max-width: 1200px) {
-  /* line 27, ../sass/parts/_header.scss */
+  /* line 39, ../sass/parts/_header.scss */
   .header-title {
     font-size: 36px;
     line-height: 42px;
   }
 }
 @media screen and (max-width: 700px) {
-  /* line 27, ../sass/parts/_header.scss */
+  /* line 39, ../sass/parts/_header.scss */
   .header-title {
     font-size: 28px;
     line-height: 34px;
   }
 }
-/* line 46, ../sass/parts/_header.scss */
+/* line 58, ../sass/parts/_header.scss */
 .header-title:before {
   position: absolute;
   content: "";
@@ -711,7 +727,7 @@ body {
   height: 3px;
   background-color: #fff;
 }
-/* line 59, ../sass/parts/_header.scss */
+/* line 71, ../sass/parts/_header.scss */
 .header-desc {
   margin: 60px auto 0px;
   max-width: 450px;
@@ -722,20 +738,20 @@ body {
   font-weight: 300;
 }
 @media screen and (max-width: 1200px) {
-  /* line 59, ../sass/parts/_header.scss */
+  /* line 71, ../sass/parts/_header.scss */
   .header-desc {
     font-size: 14px;
     line-height: 18px;
   }
 }
 @media screen and (max-width: 700px) {
-  /* line 59, ../sass/parts/_header.scss */
+  /* line 71, ../sass/parts/_header.scss */
   .header-desc {
     font-size: 13px;
     line-height: 16px;
   }
 }
-/* line 79, ../sass/parts/_header.scss */
+/* line 91, ../sass/parts/_header.scss */
 .header-arrow {
   display: flex;
   justify-content: center;
@@ -761,13 +777,13 @@ body {
   -webkit-transition: all,linear .3s;
   transition: all,linear .3s;
 }
-/* line 104, ../sass/parts/_header.scss */
+/* line 116, ../sass/parts/_header.scss */
 .header-arrow:hover, .header-arrow:active, .header-arrow:focus {
   background-color: #d07c7c;
   color: #fff;
 }
 @media screen and (max-width: 700px) {
-  /* line 79, ../sass/parts/_header.scss */
+  /* line 91, ../sass/parts/_header.scss */
   .header-arrow {
     bottom: 25px;
   }
@@ -822,7 +838,7 @@ body {
     left: 0;
     right: 0;
     padding: 15px 0;
-    background-color: rgba(208, 124, 124, 0.8);
+    background-color: #d07c7c;
     text-align: center;
     z-index: 99;
   }
@@ -830,35 +846,49 @@ body {
 /* line 52, ../sass/parts/_menubar.scss */
 .menubar-links.toggle {
   display: block;
+  position: fixed;
+  width: calc(100% - 20px);
+  margin: 0 auto;
+  padding: 0;
 }
-/* line 56, ../sass/parts/_menubar.scss */
+@media screen and (min-width: 701px) {
+  /* line 52, ../sass/parts/_menubar.scss */
+  .menubar-links.toggle {
+    position: static;
+    margin: 0;
+    width: auto;
+  }
+}
+/* line 66, ../sass/parts/_menubar.scss */
 .menubar-links li {
   display: inline-block;
   margin-right: 55px;
 }
 @media screen and (max-width: 1200px) {
-  /* line 56, ../sass/parts/_menubar.scss */
+  /* line 66, ../sass/parts/_menubar.scss */
   .menubar-links li {
     margin-right: 25px;
   }
-  /* line 63, ../sass/parts/_menubar.scss */
+  /* line 73, ../sass/parts/_menubar.scss */
   .menubar-links li:last-of-type {
     margin-right: 0;
   }
 }
 @media screen and (max-width: 700px) {
-  /* line 56, ../sass/parts/_menubar.scss */
+  /* line 66, ../sass/parts/_menubar.scss */
   .menubar-links li {
     display: block;
     margin-right: 0;
-    margin-bottom: 5px;
-  }
-  /* line 73, ../sass/parts/_menubar.scss */
-  .menubar-links li:last-of-type {
     margin-bottom: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #869791;
+  }
+  /* line 85, ../sass/parts/_menubar.scss */
+  .menubar-links li:last-of-type {
+    border-bottom: 2px solid #869791;
   }
 }
-/* line 78, ../sass/parts/_menubar.scss */
+/* line 90, ../sass/parts/_menubar.scss */
 .menubar-links li a {
   display: block;
   position: relative;
@@ -872,19 +902,19 @@ body {
   cursor: pointer;
 }
 @media screen and (max-width: 700px) {
-  /* line 78, ../sass/parts/_menubar.scss */
+  /* line 90, ../sass/parts/_menubar.scss */
   .menubar-links li a {
     color: #fff;
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 14px;
+    line-height: 18px;
   }
-  /* line 95, ../sass/parts/_menubar.scss */
+  /* line 107, ../sass/parts/_menubar.scss */
   .menubar-links li a:hover, .menubar-links li a:active, .menubar-links li a:focus {
     color: #000;
     font-weight: 700;
   }
 }
-/* line 102, ../sass/parts/_menubar.scss */
+/* line 114, ../sass/parts/_menubar.scss */
 .menubar-links li.active a:after, .menubar-links li a:hover:after {
   position: absolute;
   content: "";
@@ -896,12 +926,12 @@ body {
   background-color: #d07c7c;
 }
 @media screen and (max-width: 700px) {
-  /* line 102, ../sass/parts/_menubar.scss */
+  /* line 114, ../sass/parts/_menubar.scss */
   .menubar-links li.active a:after, .menubar-links li a:hover:after {
     display: none;
   }
 }
-/* line 119, ../sass/parts/_menubar.scss */
+/* line 131, ../sass/parts/_menubar.scss */
 .menubar-togglemenu {
   display: block;
   margin: 0;
@@ -914,7 +944,7 @@ body {
   cursor: pointer;
 }
 @media screen and (min-width: 701px) {
-  /* line 119, ../sass/parts/_menubar.scss */
+  /* line 131, ../sass/parts/_menubar.scss */
   .menubar-togglemenu {
     display: none;
   }
@@ -1468,15 +1498,22 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 60px 0 100px;
+  margin: 60px auto 100px;
+  max-width: 800px;
+}
+@media screen and (max-width: 1200px) {
+  /* line 29, ../sass/parts/_followme.scss */
+  .followme-socials {
+    max-width: 600px;
+  }
 }
 @media screen and (max-width: 700px) {
   /* line 29, ../sass/parts/_followme.scss */
   .followme-socials {
-    margin: 30px 0 50px;
+    margin: 30px auto 50px;
   }
 }
-/* line 39, ../sass/parts/_followme.scss */
+/* line 44, ../sass/parts/_followme.scss */
 .followme-socials a {
   display: flex;
   justify-content: center;
@@ -1486,23 +1523,23 @@ body {
   border-radius: 50%;
   text-decoration: none;
 }
-/* line 48, ../sass/parts/_followme.scss */
+/* line 53, ../sass/parts/_followme.scss */
 .followme-socials a:hover, .followme-socials a:active, .followme-socials a:focus {
   border: 1px solid #d07c7c;
 }
-/* line 51, ../sass/parts/_followme.scss */
+/* line 56, ../sass/parts/_followme.scss */
 .followme-socials a:hover .icon, .followme-socials a:active .icon, .followme-socials a:focus .icon {
   background-color: #d07c7c;
   color: #fff;
 }
 @media screen and (max-width: 700px) {
-  /* line 39, ../sass/parts/_followme.scss */
+  /* line 44, ../sass/parts/_followme.scss */
   .followme-socials a {
     width: 45px;
     height: 45px;
   }
 }
-/* line 62, ../sass/parts/_followme.scss */
+/* line 67, ../sass/parts/_followme.scss */
 .followme-socials a .icon {
   display: flex;
   justify-content: center;
@@ -1519,7 +1556,7 @@ body {
   transition: all,linear .3s;
 }
 @media screen and (max-width: 700px) {
-  /* line 62, ../sass/parts/_followme.scss */
+  /* line 67, ../sass/parts/_followme.scss */
   .followme-socials a .icon {
     width: 35px;
     height: 35px;

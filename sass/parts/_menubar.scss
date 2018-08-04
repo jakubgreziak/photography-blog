@@ -44,13 +44,23 @@
             left: 0;
             right: 0;
             padding: 15px 0;
-            background-color: rgba(208, 124, 124, 0.8);
+            background-color: #d07c7c;
             text-align: center;
             z-index: 99;
         }
         
         &.toggle {
             display: block;
+            position: fixed;
+            width: calc(100% - 20px);
+            margin: 0 auto;
+            padding: 0;
+            
+            @include breakpoint-min(701px) {
+                position: static;
+                margin: 0;
+                width: auto;
+            }
         }
         
         li {
@@ -68,10 +78,12 @@
             @include breakpoint(700px) {
                 display: block;
                 margin-right: 0;
-                margin-bottom: 5px;
+                margin-bottom: 0;
+                padding: 10px 0;
+                border-bottom: 1px solid #869791;
                 
                 &:last-of-type {
-                    margin-bottom: 0;
+                    border-bottom: 2px solid #869791;
                 }
             }
             
@@ -89,8 +101,8 @@
                 
                 @include breakpoint(700px) {
                     color: #fff;
-                    font-size: 18px;
-                    line-height: 24px;
+                    font-size: 14px;
+                    line-height: 18px;
                     
                     &:hover, &:active, &:focus {
                         color: #000;

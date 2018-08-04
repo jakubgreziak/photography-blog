@@ -6,6 +6,11 @@ $(document).ready(function(){
         $this.toggleClass('icon-bars').toggleClass('icon-close');
     });
     
+    $('.js-menulink').on('click', function(event) {
+        $('.menubar-links').removeClass('toggle');
+        $('.menubar-togglemenu').toggleClass('icon-bars').toggleClass('icon-close');
+    });
+    
     $(this).scroll(function() {
         var y = $(this).scrollTop();
         if (y > 200) {
@@ -73,4 +78,3 @@ $(document).ready(function(){
     });
     
 });
-          

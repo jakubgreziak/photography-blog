@@ -4,15 +4,27 @@
     position: relative;
     padding: 170px 0px 70px;
     height: 660px;
-    background: url(../img/header-background.jpg) no-repeat center / cover;
+    background-repeat: no-repeat;
+    background-position: 15% 75%;
+    background-size: cover;
+    background-image: url(../img/header-background-1870px.jpg);
     text-align: center;
     order: 1;
+    
+    @include breakpoint(1200px) {
+        background-image: url(../img/header-background-1200px.jpg);
+    }
     
     @include breakpoint(700px) {
         margin-top: 55px;
         padding: 100px 0px 50px;
         height: 500px;
+        background-image: url(../img/header-background-700px.jpg);
         order: 2;
+    }
+    
+    @include breakpoint(400px) {
+        background-position: 25% 75%;
     }
     
     &-logo {
