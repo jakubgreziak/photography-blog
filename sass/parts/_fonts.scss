@@ -1,4 +1,124 @@
 // FONTS DECLARATION
 
-@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,600,700');
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700');
+// PLAYFAIR DISPLAY
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Playfair Display Regular'), local('PlayfairDisplay-Regular'),
+       url('../fonts/playfair-display-v13-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/playfair-display-v13-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Playfair Display Bold'), local('PlayfairDisplay-Bold'),
+       url('../fonts/playfair-display-v13-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/playfair-display-v13-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+// RALEWAY
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Raleway Light'), local('Raleway-Light'),
+       url('../fonts/raleway-v12-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/raleway-v12-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Raleway'), local('Raleway-Regular'),
+       url('../fonts/raleway-v12-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/raleway-v12-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Raleway SemiBold'), local('Raleway-SemiBold'),
+       url('../fonts/raleway-v12-latin-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/raleway-v12-latin-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Raleway Bold'), local('Raleway-Bold'),
+       url('../fonts/raleway-v12-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/raleway-v12-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
+// ICOMOON - MINI FONTAWESOME
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?duqo60');
+    src:  url('../fonts/icomoon.eot?duqo60#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?duqo60') format('truetype'),
+        url('../fonts/icomoon.woff?duqo60') format('woff'),
+        url('../fonts/icomoon.svg?duqo60#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.icon {
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+    &.icon-user:before {
+        content: "\f007";
+    }
+    
+    &.icon-close:before {
+        content: "\f00d";
+    }
+    
+    &.icon-arrow-down:before {
+        content: "\f063";
+    }
+    
+    &.icon-comment:before {
+        content: "\f075";
+    }
+    
+    &.icon-twitter:before {
+        content: "\f099";
+    }
+    
+    &.icon-bars:before {
+        content: "\f0c9";
+    }
+    
+    &.icon-envelope:before {
+        content: "\f0e0";
+    }
+    
+    &.icon-instagram:before {
+        content: "\f16d";
+    }
+    
+    &.icon-tumblr:before {
+        content: "\f173";
+    }
+    
+    &.icon-google:before {
+        content: "\f1a0";
+    }
+    
+    &.icon-pinterest:before {
+        content: "\f231";
+    }
+}

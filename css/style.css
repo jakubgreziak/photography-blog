@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600,700");
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700");
 /* line 5, ../../../../../../../../../usr/local/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -63,6 +61,113 @@ a img {
 /* line 116, ../../../../../../../../../usr/local/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Playfair Display Regular"), local("PlayfairDisplay-Regular"), url("../fonts/playfair-display-v13-latin-regular.woff2") format("woff2"), url("../fonts/playfair-display-v13-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Playfair Display Bold"), local("PlayfairDisplay-Bold"), url("../fonts/playfair-display-v13-latin-700.woff2") format("woff2"), url("../fonts/playfair-display-v13-latin-700.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Raleway Light"), local("Raleway-Light"), url("../fonts/raleway-v12-latin-300.woff2") format("woff2"), url("../fonts/raleway-v12-latin-300.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Raleway"), local("Raleway-Regular"), url("../fonts/raleway-v12-latin-regular.woff2") format("woff2"), url("../fonts/raleway-v12-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  src: local("Raleway SemiBold"), local("Raleway-SemiBold"), url("../fonts/raleway-v12-latin-600.woff2") format("woff2"), url("../fonts/raleway-v12-latin-600.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Raleway Bold"), local("Raleway-Bold"), url("../fonts/raleway-v12-latin-700.woff2") format("woff2"), url("../fonts/raleway-v12-latin-700.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?duqo60");
+  src: url("../fonts/icomoon.eot?duqo60#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?duqo60") format("truetype"), url("../fonts/icomoon.woff?duqo60") format("woff"), url("../fonts/icomoon.svg?duqo60#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 69, ../sass/parts/_fonts.scss */
+.icon {
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* line 81, ../sass/parts/_fonts.scss */
+.icon.icon-user:before {
+  content: "\f007";
+}
+/* line 85, ../sass/parts/_fonts.scss */
+.icon.icon-close:before {
+  content: "\f00d";
+}
+/* line 89, ../sass/parts/_fonts.scss */
+.icon.icon-arrow-down:before {
+  content: "\f063";
+}
+/* line 93, ../sass/parts/_fonts.scss */
+.icon.icon-comment:before {
+  content: "\f075";
+}
+/* line 97, ../sass/parts/_fonts.scss */
+.icon.icon-twitter:before {
+  content: "\f099";
+}
+/* line 101, ../sass/parts/_fonts.scss */
+.icon.icon-bars:before {
+  content: "\f0c9";
+}
+/* line 105, ../sass/parts/_fonts.scss */
+.icon.icon-envelope:before {
+  content: "\f0e0";
+}
+/* line 109, ../sass/parts/_fonts.scss */
+.icon.icon-instagram:before {
+  content: "\f16d";
+}
+/* line 113, ../sass/parts/_fonts.scss */
+.icon.icon-tumblr:before {
+  content: "\f173";
+}
+/* line 117, ../sass/parts/_fonts.scss */
+.icon.icon-google:before {
+  content: "\f1a0";
+}
+/* line 121, ../sass/parts/_fonts.scss */
+.icon.icon-pinterest:before {
+  content: "\f231";
 }
 
 /* line 3, ../sass/parts/_grid.scss */
@@ -152,6 +257,363 @@ body {
   }
 }
 
+/*
+* Owl Carousel v2.3.4
+* Copyright 2013-2018 David Deutsch
+* Licensed under: SEE LICENSE IN https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE
+*/
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* line 12, ../sass/parts/_owl-carousel.scss */
+.owl-carousel {
+  display: none;
+  width: 100%;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+  z-index: 1;
+}
+/* line 19, ../sass/parts/_owl-carousel.scss */
+.owl-carousel.owl-rtl {
+  direction: rtl;
+}
+/* line 22, ../sass/parts/_owl-carousel.scss */
+.owl-carousel.owl-rtl .owl-item {
+  float: right;
+}
+/* line 27, ../sass/parts/_owl-carousel.scss */
+.owl-carousel.owl-loaded {
+  display: block;
+}
+/* line 31, ../sass/parts/_owl-carousel.scss */
+.owl-carousel.owl-grab {
+  cursor: move;
+  cursor: grab;
+}
+/* line 36, ../sass/parts/_owl-carousel.scss */
+.owl-carousel.owl-loading {
+  opacity: 0;
+  display: block;
+}
+/* line 41, ../sass/parts/_owl-carousel.scss */
+.owl-carousel.owl-hidden {
+  opacity: 0;
+}
+/* line 45, ../sass/parts/_owl-carousel.scss */
+.owl-carousel.owl-refresh .owl-item {
+  visibility: hidden;
+}
+/* line 49, ../sass/parts/_owl-carousel.scss */
+.owl-carousel.owl-drag .owl-item {
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* line 58, ../sass/parts/_owl-carousel.scss */
+.owl-carousel .owl-item {
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  min-height: 1px;
+  float: left;
+  -webkit-backface-visibility: hidden;
+  -webkit-touch-callout: none;
+}
+/* line 72, ../sass/parts/_owl-carousel.scss */
+.owl-carousel .owl-item img {
+  display: block;
+  width: 100%;
+}
+/* line 76, ../sass/parts/_owl-carousel.scss */
+.owl-carousel .owl-item img.owl-lazy {
+  transform-style: preserve-3d;
+}
+/* line 81, ../sass/parts/_owl-carousel.scss */
+.owl-carousel .owl-item .owl-lazy {
+  opacity: 0;
+  transition: opacity .4s ease;
+}
+/* line 85, ../sass/parts/_owl-carousel.scss */
+.owl-carousel .owl-item .owl-lazy:not([src]), .owl-carousel .owl-item .owl-lazy[src^=""] {
+  max-height: 0;
+}
+/* line 91, ../sass/parts/_owl-carousel.scss */
+.owl-carousel .owl-stage {
+  position: relative;
+  -ms-touch-action: pan-Y;
+  touch-action: manipulation;
+  -moz-backface-visibility: hidden;
+}
+/* line 97, ../sass/parts/_owl-carousel.scss */
+.owl-carousel .owl-stage:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+/* line 106, ../sass/parts/_owl-carousel.scss */
+.owl-carousel .owl-stage-outer {
+  position: relative;
+  overflow: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+/* line 113, ../sass/parts/_owl-carousel.scss */
+.owl-carousel .owl-wrapper {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+}
+/* line 122, ../sass/parts/_owl-carousel.scss */
+.owl-carousel .animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+/* line 128, ../sass/parts/_owl-carousel.scss */
+.owl-carousel .owl-animated-in {
+  z-index: 0;
+}
+/* line 129, ../sass/parts/_owl-carousel.scss */
+.owl-carousel .owl-animated-out {
+  z-index: 1;
+}
+/* line 132, ../sass/parts/_owl-carousel.scss */
+.owl-carousel .fadeOut {
+  animation-name: fadeOut;
+}
+/* line 136, ../sass/parts/_owl-carousel.scss */
+.owl-carousel .owl-height {
+  transition: height .5s ease-in-out;
+}
+/* line 140, ../sass/parts/_owl-carousel.scss */
+.owl-carousel .owl-video-wrapper {
+  position: relative;
+  height: 100%;
+  background: #000;
+}
+/* line 146, ../sass/parts/_owl-carousel.scss */
+.owl-carousel .owl-video-play-icon {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  left: 50%;
+  top: 50%;
+  margin-left: -40px;
+  margin-top: -40px;
+  background: url(owl.video.play.png) no-repeat;
+  cursor: pointer;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  transition: transform .1s ease;
+}
+/* line 160, ../sass/parts/_owl-carousel.scss */
+.owl-carousel .owl-video-play-icon:hover {
+  -ms-transform: scale(1.3, 1.3);
+  transform: scale(1.3, 1.3);
+}
+/* line 167, ../sass/parts/_owl-carousel.scss */
+.owl-carousel .owl-video-playing .owl-video-play-icon, .owl-carousel .owl-video-playing .owl-video-tn {
+  display: none;
+}
+/* line 172, ../sass/parts/_owl-carousel.scss */
+.owl-carousel .owl-video-tn {
+  opacity: 0;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: opacity .4s ease;
+}
+/* line 181, ../sass/parts/_owl-carousel.scss */
+.owl-carousel .owl-video-frame {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
+/* line 189, ../sass/parts/_owl-carousel.scss */
+.owl-carousel .owl-dots.disabled {
+  display: none;
+}
+/* line 196, ../sass/parts/_owl-carousel.scss */
+.owl-carousel .owl-nav .owl-next, .owl-carousel .owl-nav .owl-prev {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* line 205, ../sass/parts/_owl-carousel.scss */
+.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev {
+  background: 0 0;
+  color: inherit;
+  border: none;
+  padding: 0 !important;
+  font: inherit;
+}
+/* line 213, ../sass/parts/_owl-carousel.scss */
+.owl-carousel .owl-nav.disabled {
+  display: none;
+}
+/* line 218, ../sass/parts/_owl-carousel.scss */
+.owl-carousel .owl-dot {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* line 227, ../sass/parts/_owl-carousel.scss */
+.owl-carousel button.owl-dot {
+  background: 0 0;
+  color: inherit;
+  border: none;
+  padding: 0 !important;
+  font: inherit;
+}
+
+/* line 236, ../sass/parts/_owl-carousel.scss */
+.no-js .owl-carousel {
+  display: block;
+}
+
+/* Green theme - Owl Carousel CSS File */
+/* line 244, ../sass/parts/_owl-carousel.scss */
+.owl-theme .owl-nav {
+  margin-top: 10px;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+/* line 250, ../sass/parts/_owl-carousel.scss */
+.owl-theme .owl-nav [class*='owl-'] {
+  color: #FFF;
+  font-size: 14px;
+  margin: 5px;
+  padding: 4px 7px;
+  background: #D6D6D6;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 3px;
+}
+/* line 260, ../sass/parts/_owl-carousel.scss */
+.owl-theme .owl-nav [class*='owl-']:hover {
+  background: #4DC7A0;
+  color: #FFF;
+  text-decoration: none;
+}
+/* line 267, ../sass/parts/_owl-carousel.scss */
+.owl-theme .owl-nav .disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+/* line 272, ../sass/parts/_owl-carousel.scss */
+.owl-theme .owl-nav.disabled + .owl-dots {
+  margin-top: 10px;
+}
+/* line 278, ../sass/parts/_owl-carousel.scss */
+.owl-theme .owl-dots {
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+/* line 282, ../sass/parts/_owl-carousel.scss */
+.owl-theme .owl-dots .owl-dot {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+/* line 287, ../sass/parts/_owl-carousel.scss */
+.owl-theme .owl-dots .owl-dot span {
+  width: 10px;
+  height: 10px;
+  margin: 5px 7px;
+  background: #D6D6D6;
+  display: block;
+  -webkit-backface-visibility: visible;
+  transition: opacity 200ms ease;
+  border-radius: 30px;
+}
+/* line 300, ../sass/parts/_owl-carousel.scss */
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background: #4DC7A0;
+}
+
+/* line 313, ../sass/parts/_owl-carousel.scss */
+.owl-theme .owl-nav {
+  margin-top: 10px;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+/* line 319, ../sass/parts/_owl-carousel.scss */
+.owl-theme .owl-nav [class*=owl-] {
+  color: #FFF;
+  font-size: 14px;
+  margin: 5px;
+  padding: 4px 7px;
+  background: #D6D6D6;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 3px;
+}
+/* line 329, ../sass/parts/_owl-carousel.scss */
+.owl-theme .owl-nav [class*=owl-]:hover {
+  background: #869791;
+  color: #FFF;
+  text-decoration: none;
+}
+/* line 336, ../sass/parts/_owl-carousel.scss */
+.owl-theme .owl-nav .disabled {
+  opacity: .5;
+  cursor: default;
+}
+/* line 341, ../sass/parts/_owl-carousel.scss */
+.owl-theme .owl-nav.disabled + .owl-dots {
+  margin-top: 10px;
+}
+/* line 346, ../sass/parts/_owl-carousel.scss */
+.owl-theme .owl-dots {
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+/* line 350, ../sass/parts/_owl-carousel.scss */
+.owl-theme .owl-dots .owl-dot {
+  display: inline-block;
+  zoom: 1;
+}
+/* line 354, ../sass/parts/_owl-carousel.scss */
+.owl-theme .owl-dots .owl-dot span {
+  width: 10px;
+  height: 10px;
+  margin: 5px 7px;
+  background: #D6D6D6;
+  display: block;
+  -webkit-backface-visibility: visible;
+  transition: opacity .2s ease;
+  border-radius: 30px;
+}
+/* line 365, ../sass/parts/_owl-carousel.scss */
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background: #869791;
+}
+
 /* line 3, ../sass/parts/_header.scss */
 .header {
   position: relative;
@@ -164,12 +626,13 @@ body {
 @media screen and (max-width: 700px) {
   /* line 3, ../sass/parts/_header.scss */
   .header {
+    margin-top: 55px;
     padding: 100px 0px 50px;
     height: 500px;
     order: 2;
   }
 }
-/* line 17, ../sass/parts/_header.scss */
+/* line 18, ../sass/parts/_header.scss */
 .header-logo {
   display: block;
   margin: 0px auto;
@@ -178,7 +641,7 @@ body {
   background: url(../img/logo.png) no-repeat;
   cursor: pointer;
 }
-/* line 26, ../sass/parts/_header.scss */
+/* line 27, ../sass/parts/_header.scss */
 .header-title {
   position: relative;
   margin-top: 50px;
@@ -189,20 +652,20 @@ body {
   font-weight: 400;
 }
 @media screen and (max-width: 1200px) {
-  /* line 26, ../sass/parts/_header.scss */
+  /* line 27, ../sass/parts/_header.scss */
   .header-title {
     font-size: 36px;
     line-height: 42px;
   }
 }
 @media screen and (max-width: 700px) {
-  /* line 26, ../sass/parts/_header.scss */
+  /* line 27, ../sass/parts/_header.scss */
   .header-title {
     font-size: 28px;
     line-height: 34px;
   }
 }
-/* line 45, ../sass/parts/_header.scss */
+/* line 46, ../sass/parts/_header.scss */
 .header-title:before {
   position: absolute;
   content: "";
@@ -214,7 +677,7 @@ body {
   height: 3px;
   background-color: #fff;
 }
-/* line 58, ../sass/parts/_header.scss */
+/* line 59, ../sass/parts/_header.scss */
 .header-desc {
   margin: 60px auto 0px;
   max-width: 450px;
@@ -225,20 +688,20 @@ body {
   font-weight: 300;
 }
 @media screen and (max-width: 1200px) {
-  /* line 58, ../sass/parts/_header.scss */
+  /* line 59, ../sass/parts/_header.scss */
   .header-desc {
     font-size: 14px;
     line-height: 18px;
   }
 }
 @media screen and (max-width: 700px) {
-  /* line 58, ../sass/parts/_header.scss */
+  /* line 59, ../sass/parts/_header.scss */
   .header-desc {
     font-size: 13px;
     line-height: 16px;
   }
 }
-/* line 78, ../sass/parts/_header.scss */
+/* line 79, ../sass/parts/_header.scss */
 .header-arrow {
   position: absolute;
   bottom: 125px;
@@ -255,7 +718,7 @@ body {
   cursor: pointer;
 }
 @media screen and (max-width: 700px) {
-  /* line 78, ../sass/parts/_header.scss */
+  /* line 79, ../sass/parts/_header.scss */
   .header-arrow {
     bottom: 25px;
   }
@@ -274,10 +737,19 @@ body {
 @media screen and (max-width: 700px) {
   /* line 3, ../sass/parts/_menubar.scss */
   .menubar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 0 10px;
+    width: calc(100% - 20px);
+    border-bottom: 2px solid #869791;
+    background-color: #fff;
     order: 1;
+    z-index: 3;
   }
 }
-/* line 16, ../sass/parts/_menubar.scss */
+/* line 25, ../sass/parts/_menubar.scss */
 .menubar-logo {
   display: block;
   margin-left: 55px;
@@ -286,13 +758,13 @@ body {
   background: url(../img/logo-short-dark.png) no-repeat;
 }
 @media screen and (max-width: 1200px) {
-  /* line 16, ../sass/parts/_menubar.scss */
+  /* line 25, ../sass/parts/_menubar.scss */
   .menubar-logo {
     margin-left: 0;
   }
 }
 @media screen and (max-width: 700px) {
-  /* line 28, ../sass/parts/_menubar.scss */
+  /* line 37, ../sass/parts/_menubar.scss */
   .menubar-links {
     display: none;
     position: absolute;
@@ -306,38 +778,38 @@ body {
     z-index: 99;
   }
 }
-/* line 43, ../sass/parts/_menubar.scss */
+/* line 52, ../sass/parts/_menubar.scss */
 .menubar-links.toggle {
   display: block;
 }
-/* line 47, ../sass/parts/_menubar.scss */
+/* line 56, ../sass/parts/_menubar.scss */
 .menubar-links li {
   display: inline-block;
   margin-right: 55px;
 }
 @media screen and (max-width: 1200px) {
-  /* line 47, ../sass/parts/_menubar.scss */
+  /* line 56, ../sass/parts/_menubar.scss */
   .menubar-links li {
     margin-right: 25px;
   }
-  /* line 54, ../sass/parts/_menubar.scss */
+  /* line 63, ../sass/parts/_menubar.scss */
   .menubar-links li:last-of-type {
     margin-right: 0;
   }
 }
 @media screen and (max-width: 700px) {
-  /* line 47, ../sass/parts/_menubar.scss */
+  /* line 56, ../sass/parts/_menubar.scss */
   .menubar-links li {
     display: block;
     margin-right: 0;
     margin-bottom: 5px;
   }
-  /* line 64, ../sass/parts/_menubar.scss */
+  /* line 73, ../sass/parts/_menubar.scss */
   .menubar-links li:last-of-type {
     margin-bottom: 0;
   }
 }
-/* line 69, ../sass/parts/_menubar.scss */
+/* line 78, ../sass/parts/_menubar.scss */
 .menubar-links li a {
   display: block;
   position: relative;
@@ -351,19 +823,19 @@ body {
   cursor: pointer;
 }
 @media screen and (max-width: 700px) {
-  /* line 69, ../sass/parts/_menubar.scss */
+  /* line 78, ../sass/parts/_menubar.scss */
   .menubar-links li a {
     color: #fff;
     font-size: 18px;
     line-height: 24px;
   }
-  /* line 86, ../sass/parts/_menubar.scss */
+  /* line 95, ../sass/parts/_menubar.scss */
   .menubar-links li a:hover, .menubar-links li a:active, .menubar-links li a:focus {
     color: #000;
     font-weight: 700;
   }
 }
-/* line 93, ../sass/parts/_menubar.scss */
+/* line 102, ../sass/parts/_menubar.scss */
 .menubar-links li.active a:after, .menubar-links li a:hover:after {
   position: absolute;
   content: "";
@@ -375,12 +847,12 @@ body {
   background-color: #d07c7c;
 }
 @media screen and (max-width: 700px) {
-  /* line 93, ../sass/parts/_menubar.scss */
+  /* line 102, ../sass/parts/_menubar.scss */
   .menubar-links li.active a:after, .menubar-links li a:hover:after {
     display: none;
   }
 }
-/* line 110, ../sass/parts/_menubar.scss */
+/* line 119, ../sass/parts/_menubar.scss */
 .menubar-togglemenu {
   display: block;
   margin: 0;
@@ -393,7 +865,7 @@ body {
   cursor: pointer;
 }
 @media screen and (min-width: 701px) {
-  /* line 110, ../sass/parts/_menubar.scss */
+  /* line 119, ../sass/parts/_menubar.scss */
   .menubar-togglemenu {
     display: none;
   }
@@ -967,11 +1439,11 @@ body {
 }
 /* line 48, ../sass/parts/_followme.scss */
 .followme-socials a:hover, .followme-socials a:active, .followme-socials a:focus {
-  border: 1px solid #e6b5b5;
+  border: 1px solid #d07c7c;
 }
 /* line 51, ../sass/parts/_followme.scss */
-.followme-socials a:hover .fa, .followme-socials a:active .fa, .followme-socials a:focus .fa {
-  background-color: #e6b5b5;
+.followme-socials a:hover .icon, .followme-socials a:active .icon, .followme-socials a:focus .icon {
+  background-color: #d07c7c;
   color: #fff;
 }
 @media screen and (max-width: 700px) {
@@ -982,7 +1454,7 @@ body {
   }
 }
 /* line 62, ../sass/parts/_followme.scss */
-.followme-socials a .fa {
+.followme-socials a .icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -999,7 +1471,7 @@ body {
 }
 @media screen and (max-width: 700px) {
   /* line 62, ../sass/parts/_followme.scss */
-  .followme-socials a .fa {
+  .followme-socials a .icon {
     width: 35px;
     height: 35px;
     font-size: 18px;
@@ -1121,7 +1593,7 @@ body {
   min-height: 150px;
 }
 /* line 111, ../sass/parts/_contact.scss */
-.contact-form label .fa {
+.contact-form label .icon {
   position: absolute;
   top: 18px;
   left: 10px;

@@ -46,10 +46,10 @@
             text-decoration: none;
             
             &:hover, &:active, &:focus {
-                border: 1px solid #e6b5b5;
+                border: 1px solid #d07c7c;
                 
-                .fa {
-                    background-color: #e6b5b5;
+                .icon {
+                    background-color: #d07c7c;
                     color: #fff;
                 }
             }
@@ -59,7 +59,7 @@
                 height: 45px;
             }
             
-            .fa {
+            .icon {
                 display: flex;
                 justify-content: center;
                 align-items: center;

@@ -4,9 +4,6 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Photography Blog</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
@@ -17,7 +14,7 @@
                 <h1 class="header-title">See the world through my lens</h1>
                 <p class="header-desc">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
             </div>
-            <button class="header-arrow fa fa-arrow-down"></button>
+            <button class="header-arrow icon icon-arrow-down"></button>
         </header>
         
         <div class="menubar">
@@ -28,7 +25,7 @@
                 <li><a href="#">Contact me</a></li>
                 <li><a href="#">Follow me</a></li>
             </ul>
-            <button class="menubar-togglemenu fa fa-bars"></button>
+            <button class="menubar-togglemenu icon icon-bars"></button>
         </div>
         
         <section class="aboutme">
@@ -142,11 +139,11 @@
             <div class="container">
                 <h2 class="followme-title">Follow me</h2>
                 <div class="followme-socials">
-                    <a href="#"><span class="fa fa-pinterest-p"></span></a>
-                    <a href="#"><span class="fa fa-instagram"></span></a>
-                    <a href="#"><span class="fa fa-twitter"></span></a>
-                    <a href="#"><span class="fa fa-google-plus"></span></a>
-                    <a href="#"><span class="fa fa-tumblr"></span></a>
+                    <a href="#"><span class="icon icon-pinterest"></span></a>
+                    <a href="#"><span class="icon icon-instagram"></span></a>
+                    <a href="#"><span class="icon icon-twitter"></span></a>
+                    <a href="#"><span class="icon icon-google"></span></a>
+                    <a href="#"><span class="icon icon-tumblr"></span></a>
                 </div>
             </div>
         </section>
@@ -157,15 +154,15 @@
                 <p class="contact-desc">Claritas est etiam processus dynamicus qui sequitur</p>
                 <form class="contact-form">
                     <label>
-                        <i class="fa fa-user"></i>
+                        <i class="icon icon-user"></i>
                         <input name="name" placeholder="Your Name*">
                     </label>
                     <label>
-                        <i class="fa fa-envelope"></i>
+                        <i class="icon icon-envelope"></i>
                         <input name="email" placeholder="Your E-mail address*">
                     </label>
                     <label>
-                        <i class="fa fa-comment"></i>
+                        <i class="icon icon-comment"></i>
                         <textarea name="message" placeholder="Your Message"></textarea>
                     </label>
                     <button type="submit">SEND</button>
@@ -179,70 +176,10 @@
         </footer>
       
         
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
-
-        <script>
-
-            $('.menubar-togglemenu').on('click', function(){
-                var $this = $(this);
-                $('.menubar-links').toggleClass('toggle');
-                $this.toggleClass('fa-bars').toggleClass('fa-close');
-            });
-
-            $(document).ready(function(){
-                $(".reviews-slider").owlCarousel({
-                    loop: true,
-                    dots: true,
-                    dotsEach: true,
-                    nav: false,
-                    autoplay: true,
-                    autoplayTimeout: 4500,
-                    autoplayHoverPause: true,
-                    items: 1
-                });
-            });
-            
-            $('.contact-form').validate({ 
-
-                rules: {
-                    name: {
-                        required: true,
-                        minlength: 3,
-                        maxlength: 49
-                    },
-                    email: {
-                        required: true,
-                        email: true
-                    },
-                    message: {
-                        required: true,
-                        minlength: 15,
-                        maxlength: 500
-                    }
-                },
-                errorClass: "js-error",
-                messages: {
-                    name: {
-                        required: "Please enter your name",
-                        minlength: "This label must be at least 3 characters long",
-                        maxlength: "This label must be at most 49 characters long"
-                    },
-                    email: {
-                        required: "Please enter your email",
-                        email: "Please enter a valid email address"
-                    },
-                    message: {
-                        required: "Please enter your message",
-                        minlength: "This label must be at least 15 characters long",
-                        maxlength: "This label must be at most 500 characters long"
-                    }
-                }
-            });
- 
-
-
-        </script>
+        <script src="js/libs/jquery-3.3.1.min.js"></script>
+        <script src="js/libs/owl.carousel.min.js"></script>
+        <script src="js/libs/jquery.validate.min.js"></script>
+        <script src="js/scripts.js"></script>
+        
     </body>
 </html>
