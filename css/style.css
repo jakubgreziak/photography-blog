@@ -1355,3 +1355,94 @@ body {
   height: 100%;
   border: 0;
 }
+
+/* line 3, ../sass/parts/_followme.scss */
+.followme {
+  order: 7;
+}
+/* line 6, ../sass/parts/_followme.scss */
+.followme-title {
+  position: relative;
+  color: #5a5957;
+  font-family: "Playfair Display";
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}
+/* line 16, ../sass/parts/_followme.scss */
+.followme-title:after {
+  position: absolute;
+  content: "";
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 62px;
+  height: 3px;
+  background-color: #d07c7c;
+}
+/* line 29, ../sass/parts/_followme.scss */
+.followme-socials {
+  margin: 60px 0 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 700px) {
+  /* line 29, ../sass/parts/_followme.scss */
+  .followme-socials {
+    margin: 30px 0 50px;
+  }
+}
+/* line 39, ../sass/parts/_followme.scss */
+.followme-socials a {
+  width: 65px;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  text-decoration: none;
+}
+/* line 48, ../sass/parts/_followme.scss */
+.followme-socials a:hover, .followme-socials a:active, .followme-socials a:focus {
+  border: 1px solid #e6b5b5;
+}
+/* line 51, ../sass/parts/_followme.scss */
+.followme-socials a:hover .fa, .followme-socials a:active .fa, .followme-socials a:focus .fa {
+  background-color: #e6b5b5;
+  color: #fff;
+}
+@media screen and (max-width: 700px) {
+  /* line 39, ../sass/parts/_followme.scss */
+  .followme-socials a {
+    width: 45px;
+    height: 45px;
+  }
+}
+/* line 62, ../sass/parts/_followme.scss */
+.followme-socials a .fa {
+  font-size: 25px;
+  line-height: 100%;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #848282;
+  -moz-transition: all,linear .3s;
+  -o-transition: all,linear .3s;
+  -webkit-transition: all,linear .3s;
+  transition: all,linear .3s;
+}
+@media screen and (max-width: 700px) {
+  /* line 62, ../sass/parts/_followme.scss */
+  .followme-socials a .fa {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+}

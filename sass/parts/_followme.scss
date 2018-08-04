@@ -1,0 +1,85 @@
+// FOLLOWME
+
+.followme {
+    order: 7;
+    
+    &-title {
+        position: relative;
+        color: #5a5957;
+        font-family: "Playfair Display";
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 30px;
+        text-transform: uppercase;
+        text-align: center;
+        
+        &:after {
+            position: absolute;
+            content: "";
+            bottom: -10px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 62px;
+            height: 3px;
+            background-color: #d07c7c;
+        }
+    }
+    
+    &-socials {
+        margin: 60px 0 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        @include breakpoint(700px) {
+            margin: 30px 0 50px;
+        }
+        
+        a {
+            width: 65px;
+            height: 65px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            text-decoration: none;
+            
+            &:hover, &:active, &:focus {
+                border: 1px solid #e6b5b5;
+                
+                .fa {
+                    background-color: #e6b5b5;
+                    color: #fff;
+                }
+            }
+            
+            @include breakpoint(700px) {
+                width: 45px;
+                height: 45px;
+            }
+            
+            .fa {
+                font-size: 25px;
+                line-height: 100%;
+                width: 55px;
+                height: 55px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                color: #848282;
+                -moz-transition: all,linear .3s;
+                -o-transition: all,linear .3s;
+                -webkit-transition: all,linear .3s;
+                transition: all,linear .3s;
+                
+                @include breakpoint(700px) {
+                    width: 35px;
+                    height: 35px;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
