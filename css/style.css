@@ -1577,3 +1577,28 @@ body {
   margin-top: 5px;
   font-size: 12px;
 }
+
+/* line 3, ../sass/parts/_footer.scss */
+.footer {
+  padding: 25px 0;
+  text-align: center;
+  order: 8;
+}
+/* line 8, ../sass/parts/_footer.scss */
+.footer-logo {
+  width: 90px;
+  height: 38px;
+  background: url(../img/logo-dark.png) no-repeat;
+  display: block;
+  margin: 0px auto;
+  cursor: pointer;
+}
+/* line 17, ../sass/parts/_footer.scss */
+.footer-copyright {
+  margin-top: 15px;
+  color: #848282;
+  font-family: Raleway;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 18px;
+}
