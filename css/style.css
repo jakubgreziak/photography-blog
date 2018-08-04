@@ -562,24 +562,24 @@ VARIABLES DEFAULT
 /* SIZES */
 /* line 10, ../sass/parts/_default.scss */
 body {
-  position: relative;
   display: flex;
   flex-direction: column;
+  position: relative;
+  margin: 0px auto;
+  padding: 0 25px;
   max-width: 1920px;
-  background-color: white;
-  color: black;
+  background-color: #fff;
+  color: #000;
   font-family: Raleway;
   font-size: 13px;
   line-height: 100%;
   font-weight: 400;
   overflow-x: hidden;
-  margin: 0px auto;
-  padding: 25px;
 }
 @media screen and (max-width: 1200px) {
   /* line 10, ../sass/parts/_default.scss */
   body {
-    padding: 15px;
+    padding: 0 15px;
   }
 }
 @media screen and (max-width: 700px) {
@@ -594,6 +594,7 @@ body {
 ****************************************************************************/
 /* line 3, ../sass/parts/_header.scss */
 .header {
+  position: relative;
   height: 660px;
   text-align: center;
   background: url(../img/header-background.jpg) no-repeat;
@@ -609,12 +610,12 @@ body {
     padding: 100px 0px 50px;
   }
 }
-/* line 18, ../sass/parts/_header.scss */
+/* line 19, ../sass/parts/_header.scss */
 .header-logo {
   display: block;
   margin: 0px auto;
 }
-/* line 24, ../sass/parts/_header.scss */
+/* line 25, ../sass/parts/_header.scss */
 .header-title {
   position: relative;
   color: white;
@@ -625,20 +626,20 @@ body {
   margin-top: 50px;
 }
 @media screen and (max-width: 1200px) {
-  /* line 24, ../sass/parts/_header.scss */
+  /* line 25, ../sass/parts/_header.scss */
   .header-title {
     font-size: 36px;
     line-height: 42px;
   }
 }
 @media screen and (max-width: 700px) {
-  /* line 24, ../sass/parts/_header.scss */
+  /* line 25, ../sass/parts/_header.scss */
   .header-title {
     font-size: 28px;
     line-height: 34px;
   }
 }
-/* line 43, ../sass/parts/_header.scss */
+/* line 44, ../sass/parts/_header.scss */
 .header-title:before {
   position: absolute;
   width: 80px;
@@ -650,7 +651,7 @@ body {
   right: 0px;
   margin: 0px auto;
 }
-/* line 56, ../sass/parts/_header.scss */
+/* line 57, ../sass/parts/_header.scss */
 .header-desc {
   max-width: 450px;
   color: white;
@@ -661,20 +662,20 @@ body {
   margin: 60px auto 0px;
 }
 @media screen and (max-width: 1200px) {
-  /* line 56, ../sass/parts/_header.scss */
+  /* line 57, ../sass/parts/_header.scss */
   .header-desc {
     font-size: 14px;
     line-height: 18px;
   }
 }
 @media screen and (max-width: 700px) {
-  /* line 56, ../sass/parts/_header.scss */
+  /* line 57, ../sass/parts/_header.scss */
   .header-desc {
     font-size: 13px;
     line-height: 16px;
   }
 }
-/* line 76, ../sass/parts/_header.scss */
+/* line 77, ../sass/parts/_header.scss */
 .header-arrow {
   background-color: inherit;
   font-size: 20px;
@@ -690,7 +691,7 @@ body {
   outline: 0px;
 }
 @media screen and (max-width: 700px) {
-  /* line 76, ../sass/parts/_header.scss */
+  /* line 77, ../sass/parts/_header.scss */
   .header-arrow {
     bottom: 25px;
   }
@@ -829,30 +830,25 @@ body {
   }
 }
 
-@media screen and (max-width: 700px) {
-  /* line 3, ../sass/parts/_aboutme.scss */
-  .aboutme {
-    order: 3;
-  }
-}
-/* line 9, ../sass/parts/_aboutme.scss */
-.aboutme-inner {
+/* line 3, ../sass/parts/_aboutme.scss */
+.aboutme {
   padding: 140px 0;
 }
 @media screen and (max-width: 1200px) {
-  /* line 9, ../sass/parts/_aboutme.scss */
-  .aboutme-inner {
+  /* line 3, ../sass/parts/_aboutme.scss */
+  .aboutme {
     padding: 70px 0;
   }
 }
 @media screen and (max-width: 700px) {
-  /* line 9, ../sass/parts/_aboutme.scss */
-  .aboutme-inner {
+  /* line 3, ../sass/parts/_aboutme.scss */
+  .aboutme {
     padding: 50px 0;
+    order: 3;
   }
 }
-/* line 20, ../sass/parts/_aboutme.scss */
-.aboutme-inner-title {
+/* line 15, ../sass/parts/_aboutme.scss */
+.aboutme-title {
   color: #5a5957;
   font-family: "Playfair Display";
   font-size: 25px;
@@ -862,11 +858,11 @@ body {
   text-align: center;
   position: relative;
 }
-/* line 30, ../sass/parts/_aboutme.scss */
-.aboutme-inner-title:after {
+/* line 25, ../sass/parts/_aboutme.scss */
+.aboutme-title:after {
   position: absolute;
   content: "";
-  bottom: -20px;
+  bottom: -10px;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -874,8 +870,8 @@ body {
   height: 3px;
   background-color: #d07c7c;
 }
-/* line 43, ../sass/parts/_aboutme.scss */
-.aboutme-inner-desc {
+/* line 38, ../sass/parts/_aboutme.scss */
+.aboutme-desc {
   color: #848282;
   font-family: Raleway;
   font-size: 14px;
@@ -884,4 +880,324 @@ body {
   max-width: 750px;
   margin: 60px auto 0;
   text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+  /* line 3, ../sass/parts/_works.scss */
+  .works {
+    order: 4;
+  }
+}
+/* line 9, ../sass/parts/_works.scss */
+.works-title {
+  position: relative;
+  margin-bottom: 70px;
+  color: #5a5957;
+  font-family: "Playfair Display";
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}
+@media screen and (max-width: 1200px) {
+  /* line 9, ../sass/parts/_works.scss */
+  .works-title {
+    margin-bottom: 35px;
+  }
+}
+/* line 24, ../sass/parts/_works.scss */
+.works-title:after {
+  position: absolute;
+  content: "";
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 62px;
+  height: 3px;
+  background-color: #d07c7c;
+}
+/* line 37, ../sass/parts/_works.scss */
+.works-posts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 25px;
+  grid-auto-rows: minmax(370px, auto);
+}
+@media screen and (max-width: 1200px) {
+  /* line 37, ../sass/parts/_works.scss */
+  .works-posts {
+    grid-gap: 15px;
+  }
+}
+@media screen and (max-width: 992px) {
+  /* line 37, ../sass/parts/_works.scss */
+  .works-posts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 700px) {
+  /* line 37, ../sass/parts/_works.scss */
+  .works-posts {
+    grid-gap: 10px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: minmax(300px, auto);
+  }
+}
+/* line 57, ../sass/parts/_works.scss */
+.works-posts .works-singlepost {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  background: no-repeat center / cover;
+  color: #ffffff;
+  font-family: Raleway;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+@media screen and (max-width: 700px) {
+  /* line 75, ../sass/parts/_works.scss */
+  .works-posts .works-singlepost:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+  }
+}
+@media screen and (min-width: 701px) {
+  /* line 89, ../sass/parts/_works.scss */
+  .works-posts .works-singlepost:hover:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+  }
+  /* line 100, ../sass/parts/_works.scss */
+  .works-posts .works-singlepost:hover .inner {
+    padding: 40px 80px;
+  }
+}
+/* line 106, ../sass/parts/_works.scss */
+.works-posts .works-singlepost.nature {
+  grid-row: 1;
+  grid-column: 1/3;
+  background-image: url("../img/nature.jpg");
+}
+@media screen and (max-width: 992px) {
+  /* line 106, ../sass/parts/_works.scss */
+  .works-posts .works-singlepost.nature {
+    grid-row: 1;
+    grid-column: 1/3;
+  }
+}
+@media screen and (max-width: 700px) {
+  /* line 106, ../sass/parts/_works.scss */
+  .works-posts .works-singlepost.nature {
+    grid-row: 1;
+    grid-column: 1;
+  }
+}
+/* line 122, ../sass/parts/_works.scss */
+.works-posts .works-singlepost.urban {
+  grid-row: 1/3;
+  grid-column: 3;
+  background-image: url("../img/urban.jpg");
+}
+@media screen and (max-width: 992px) {
+  /* line 122, ../sass/parts/_works.scss */
+  .works-posts .works-singlepost.urban {
+    grid-row: 2/4;
+    grid-column: 2;
+  }
+}
+@media screen and (max-width: 700px) {
+  /* line 122, ../sass/parts/_works.scss */
+  .works-posts .works-singlepost.urban {
+    grid-row: 2;
+    grid-column: 1;
+  }
+}
+/* line 138, ../sass/parts/_works.scss */
+.works-posts .works-singlepost.people {
+  grid-row: 2;
+  grid-column: 1;
+  background-image: url("../img/people.jpg");
+}
+@media screen and (max-width: 992px) {
+  /* line 138, ../sass/parts/_works.scss */
+  .works-posts .works-singlepost.people {
+    grid-row: 2;
+    grid-column: 1;
+  }
+}
+@media screen and (max-width: 700px) {
+  /* line 138, ../sass/parts/_works.scss */
+  .works-posts .works-singlepost.people {
+    grid-row: 3;
+    grid-column: 1;
+  }
+}
+/* line 155, ../sass/parts/_works.scss */
+.works-posts .works-singlepost.wedding {
+  grid-row: 2;
+  grid-column: 2;
+  background-image: url("../img/wedding.jpg");
+}
+@media screen and (max-width: 992px) {
+  /* line 155, ../sass/parts/_works.scss */
+  .works-posts .works-singlepost.wedding {
+    grid-row: 3;
+    grid-column: 1;
+  }
+}
+@media screen and (max-width: 700px) {
+  /* line 155, ../sass/parts/_works.scss */
+  .works-posts .works-singlepost.wedding {
+    grid-row: 4;
+    grid-column: 1;
+  }
+}
+/* line 171, ../sass/parts/_works.scss */
+.works-posts .works-singlepost.architecture {
+  grid-row: 3;
+  grid-column: 1/3;
+  background-image: url("../img/architecture.jpg");
+}
+@media screen and (max-width: 992px) {
+  /* line 171, ../sass/parts/_works.scss */
+  .works-posts .works-singlepost.architecture {
+    grid-row: 4;
+    grid-column: 1/3;
+  }
+}
+@media screen and (max-width: 700px) {
+  /* line 171, ../sass/parts/_works.scss */
+  .works-posts .works-singlepost.architecture {
+    grid-row: 5;
+    grid-column: 1;
+  }
+}
+/* line 188, ../sass/parts/_works.scss */
+.works-posts .works-singlepost.animals {
+  grid-row: 3;
+  grid-column: 3;
+  background-image: url("../img/animals.jpg");
+}
+@media screen and (max-width: 992px) {
+  /* line 188, ../sass/parts/_works.scss */
+  .works-posts .works-singlepost.animals {
+    grid-row: 5;
+    grid-column: 1/3;
+  }
+}
+@media screen and (max-width: 700px) {
+  /* line 188, ../sass/parts/_works.scss */
+  .works-posts .works-singlepost.animals {
+    grid-row: 6;
+    grid-column: 1;
+  }
+}
+/* line 204, ../sass/parts/_works.scss */
+.works-posts .works-singlepost .inner {
+  position: relative;
+  padding: 10px 50px;
+  z-index: 2;
+  -moz-transition: all,linear .1s;
+  -o-transition: all,linear .1s;
+  -webkit-transition: all,linear .1s;
+  transition: all,linear .1s;
+}
+/* line 213, ../sass/parts/_works.scss */
+.works-posts .works-singlepost .inner span {
+  display: block;
+  position: relative;
+  margin-bottom: 20px;
+  font-family: "Playfair Display";
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+/* line 223, ../sass/parts/_works.scss */
+.works-posts .works-singlepost .inner span::after {
+  position: absolute;
+  content: "";
+  bottom: -12px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+}
+/* line 236, ../sass/parts/_works.scss */
+.works-posts .works-singlepost .inner .corner {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+}
+/* line 241, ../sass/parts/_works.scss */
+.works-posts .works-singlepost .inner .corner.top-left {
+  left: 0;
+  top: 0;
+  border-left: 2px solid #fff;
+  border-top: 2px solid #fff;
+}
+/* line 248, ../sass/parts/_works.scss */
+.works-posts .works-singlepost .inner .corner.top-right {
+  right: 0;
+  top: 0;
+  border-right: 2px solid #fff;
+  border-top: 2px solid #fff;
+}
+/* line 255, ../sass/parts/_works.scss */
+.works-posts .works-singlepost .inner .corner.bottom-left {
+  left: 0;
+  bottom: 0;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+/* line 262, ../sass/parts/_works.scss */
+.works-posts .works-singlepost .inner .corner.bottom-right {
+  right: 0;
+  bottom: 0;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+/* line 273, ../sass/parts/_works.scss */
+.works-button {
+  display: block;
+  margin: 60px auto 0;
+  padding: 20px 50px;
+  border: 2px solid #d07c7c;
+  outline: 0;
+  background-color: inherit;
+  color: #d07c7c;
+  font-family: Raleway;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+/* line 288, ../sass/parts/_works.scss */
+.works-button:hover, .works-button:active, .works-button:focus {
+  background-color: #d07c7c;
+  color: #ffffff;
 }
