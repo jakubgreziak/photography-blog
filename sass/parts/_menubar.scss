@@ -1,24 +1,26 @@
 // MENUBAR
 
 .menubar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include display-flex;
+    @include justify-content(space-between);
+    @include align-items(center);
+    @include order(2);
+    
     position: relative;
     height: 55px;
-    border-bottom: 1px solid #ebebeb;
-    order: 2;
+    border-bottom: 1px solid $gray;
     
     @include breakpoint(700px) {
+        @include order(1);
+        
         position: fixed;
         left: 0;
         right: 0;
         margin: 0 auto;
         padding: 0 10px;
         width: calc(100% - 20px);
-        border-bottom: 2px solid #869791;
-        background-color: #fff;
-        order: 1;
+        border-bottom: 2px solid $gray;
+        background-color: $white;
         z-index: 3;
     }
 
@@ -44,7 +46,7 @@
             left: 0;
             right: 0;
             padding: 15px 0;
-            background-color: #d07c7c;
+            background-color: $pink;
             text-align: center;
             z-index: 99;
         }
@@ -52,9 +54,9 @@
         &.toggle {
             display: block;
             position: fixed;
-            width: calc(100% - 20px);
             margin: 0 auto;
             padding: 0;
+            width: calc(100% - 20px);
             
             @include breakpoint-min(701px) {
                 position: static;
@@ -79,34 +81,32 @@
                 display: block;
                 margin-right: 0;
                 margin-bottom: 0;
-                padding: 10px 0;
-                border-bottom: 1px solid #869791;
+                border-bottom: 1px solid $gray;
                 
                 &:last-of-type {
-                    border-bottom: 2px solid #869791;
+                    border-bottom: 2px solid $gray;
                 }
             }
             
             a {
                 display: block;
                 position: relative;
-                color: #696969;
-                font-family: Raleway;
-                font-size: 13px;
-                line-height: 18px;
-                font-weight: 300;
+                color: $darkgray;
+                font-family: $raleway;
+                font-size: $font-normal;
+                line-height: $font-medium;
+                font-weight: $normal;
                 text-transform: uppercase;
                 text-decoration: none;
                 cursor: pointer;
                 
                 @include breakpoint(700px) {
-                    color: #fff;
-                    font-size: 14px;
-                    line-height: 18px;
+                    padding: 10px 0;
+                    color: $white;
                     
                     &:hover, &:active, &:focus {
-                        color: #000;
-                        font-weight: 700;
+                        color: $darkgray;
+                        font-weight: $bold;
                     }
                 }
             }
@@ -119,7 +119,7 @@
                 right: 0;
                 width: 100%;
                 height: 2px;
-                background-color: #d07c7c;
+                background-color: $pink;
                 
                 @include breakpoint(700px) {
                     display: none;
@@ -130,14 +130,9 @@
     
     &-togglemenu {
         display: block;
-        margin: 0;
-        padding: 0;
-        border: 0;
-        outline: 0;
         background-color: inherit;
-        color: #d07c7c;
-        font-size: 25px;
-        cursor: pointer;
+        color: $pink;
+        font-size: $font-big - 1;
         
         @include breakpoint-min(701px) {
             display: none;

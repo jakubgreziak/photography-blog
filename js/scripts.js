@@ -14,9 +14,9 @@ $(document).ready(function(){
     $(this).scroll(function() {
         var y = $(this).scrollTop();
         if (y > 200) {
-            $('.button-back').fadeIn(300);
+            $('.btn-back').fadeIn(300);
         } else {
-            $('.button-back').fadeOut(300);
+            $('.btn-back').fadeOut(300);
         }
     });
     

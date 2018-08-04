@@ -3,7 +3,7 @@
 .footer {
     padding: 25px 0;
     text-align: center;
-    order: 8;
+    @include order(8);
     
     &-logo {
         display: block;
@@ -16,10 +16,8 @@
     
     &-copyright {
         margin-top: 15px;
-        color: #848282;
-        font-family: Raleway;
-        font-size: 12px;
-        line-height: 18px;
-        font-weight: 300;
+        color: $gray;
+        font-size: $font-normal - 1;
+        line-height: $font-medium;
     }
 }

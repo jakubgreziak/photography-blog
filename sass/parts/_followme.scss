@@ -1,36 +1,14 @@
 // FOLLOWME
 
 .followme {
-    order: 7;
-    
-    &-title {
-        position: relative;
-        color: #5a5957;
-        font-family: "Playfair Display";
-        font-size: 25px;
-        line-height: 30px;
-        font-weight: 400;
-        text-transform: uppercase;
-        text-align: center;
-        
-        &:after {
-            position: absolute;
-            content: "";
-            bottom: -10px;
-            left: 0;
-            right: 0;
-            margin: 0 auto;
-            width: 62px;
-            height: 3px;
-            background-color: #d07c7c;
-        }
-    }
+    @include order(7);
     
     &-socials {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 60px auto 100px;
+        @include display-flex;
+        @include justify-content(space-between);
+        @include align-items(center);
+        
+        margin: 60px auto;
         max-width: 800px;
         
         @include breakpoint(1200px) {
@@ -38,24 +16,25 @@
         }
         
         @include breakpoint(700px) {
-            margin: 30px auto 50px;
+            margin: 50px auto;
         }
         
         a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include display-flex;
+            @include justify-content(center);
+            @include align-items(center);
+            @include border-radius(50%);
+            
             width: 65px;
             height: 65px;
-            border-radius: 50%;
             text-decoration: none;
             
             &:hover, &:active, &:focus {
-                border: 1px solid #d07c7c;
+                border: 1px solid $pink;
                 
                 .icon {
-                    background-color: #d07c7c;
-                    color: #fff;
+                    background-color: $pink;
+                    color: $white;
                 }
             }
             
@@ -65,24 +44,22 @@
             }
             
             .icon {
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include display-flex;
+                @include justify-content(center);
+                @include align-items(center);
+                @include border-radius(50%);
+                @include transition(all, linear .3s);
+                
                 width: 55px;
                 height: 55px;
-                border-radius: 50%;
-                color: #848282;
-                font-size: 25px;
+                color: $gray;
+                font-size: $font-big - 1;
                 line-height: 100%;
-                -moz-transition: all,linear .3s;
-                -o-transition: all,linear .3s;
-                -webkit-transition: all,linear .3s;
-                transition: all,linear .3s;
                 
                 @include breakpoint(700px) {
                     width: 35px;
                     height: 35px;
-                    font-size: 18px;
+                    font-size: $font-medium;
                 }
             }
         }
